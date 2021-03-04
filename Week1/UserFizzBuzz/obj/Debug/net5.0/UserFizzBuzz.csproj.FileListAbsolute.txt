@@ -1,0 +1,16 @@
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\bin\Debug\net5.0\UserFizzBuzz.exe
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\bin\Debug\net5.0\UserFizzBuzz.deps.json
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\bin\Debug\net5.0\UserFizzBuzz.runtimeconfig.json
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\bin\Debug\net5.0\UserFizzBuzz.runtimeconfig.dev.json
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\bin\Debug\net5.0\UserFizzBuzz.dll
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\bin\Debug\net5.0\ref\UserFizzBuzz.dll
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\bin\Debug\net5.0\UserFizzBuzz.pdb
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.csprojAssemblyReference.cache
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.AssemblyInfoInputs.cache
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.AssemblyInfo.cs
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.csproj.CoreCompileInputs.cache
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.dll
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\ref\UserFizzBuzz.dll
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.pdb
+D:\Source\Repos\Revature\Week1\UserFizzBuzz\obj\Debug\net5.0\UserFizzBuzz.genruntimeconfig.cache
