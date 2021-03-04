@@ -10,9 +10,14 @@ namespace PizzaBox.Domain.Singletons
 
         public StoreSingleton()
         {
-            Stores = new List<AStore>();
-            Stores.Add(new FreddyPizza());
-            Stores[0].Name = "Freddy Pizza";
+            Stores = new List<AStore>()
+            {
+                new FreddyPizza("Freddy's Store"),
+                new MamasPizza("Mama's Store"),
+                new PapasPizza("Papa's Store")
+            };
+//            Stores.Add(new FreddyPizza());
+  //          Stores[0].Name = "Freddy Pizza";
 
             // {
             //     new FreddyPizza()

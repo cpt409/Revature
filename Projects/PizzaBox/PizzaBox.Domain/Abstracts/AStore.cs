@@ -2,15 +2,14 @@ namespace PizzaBox.Domain.Abstracts
 {
     abstract public class AStore
     {
-        public string Name { get; set; }
 
-        
+        public AStore(string n)
+        {
+            Name = n;
+        } 
+
+        public string Name { get; protected set; }
 
     }
-
-
-
-
-
 
 }

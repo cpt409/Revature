@@ -12,21 +12,10 @@ namespace PizzaBox.Domain.Singletons
         {
             Pizzas = new List<APizza>()
             {
-                new PepperoniPizza()
-                {
-                    Name = "Pepperoni Pizza"
-                }
+                new PepperoniPizza("Pepperoni Pizza"),
+                new MeatLoversPizza("Meat Lover's Pizza"),
+                new VeggiePizza("Veggie Pizza")
             };
-            // Stores = new List<AStore>();
-            // Stores.Add(new FreddyPizza());
-            // Stores[0].Name = "Freddy Pizza";
-
-            // {
-            //     new FreddyPizza()
-            //     {
-            //         Name = "Freddy Pizza"  
-            //     }
-            // }
         }
 
     }

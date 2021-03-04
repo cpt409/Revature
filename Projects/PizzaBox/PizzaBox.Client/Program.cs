@@ -30,12 +30,6 @@ namespace PizzaBox.Client
                 System.Console.WriteLine(store);
             }
 
-            //System.Console.WriteLine(storeSingleton.Stores);
-
-            // FreddyPizza fp = new FreddyPizza();
-            // fp.Name = "Freddy's Pizza";
-
-            // System.Console.WriteLine($"{fp.Name}");
         }
     }
 }
