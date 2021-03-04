@@ -3,13 +3,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# my files
-
-
-# my folders
-
-
-
+# My Files
+*.log
 
 # User-specific files
 *.rsuser
