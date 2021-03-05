@@ -11,6 +11,7 @@ namespace PizzaBox.Domain.Abstracts
         public APizza(string name)
         {
             Name = name;   
+            FactoryMethod();
         }
 
         public string Name { get; set; }
@@ -20,10 +21,17 @@ namespace PizzaBox.Domain.Abstracts
 
         public List<Topping> Toppings {get; set;}
 
-        private void ConstructPizza()
+        private void FactoryMethod()
         {
-
+            AddCrust();
+            AddSize();
+            AddToppings();
         }
+
+        protected abstract void AddCrust();
+        protected abstract void AddSize();
+        protected abstract void AddToppings();
+
 
 
     }
