@@ -16,15 +16,7 @@ namespace PizzaBox.Domain.Singletons
                 new MamasPizza("Mama's Store"),
                 new PapasPizza("Papa's Store")
             };
-//            Stores.Add(new FreddyPizza());
-  //          Stores[0].Name = "Freddy Pizza";
 
-            // {
-            //     new FreddyPizza()
-            //     {
-            //         Name = "Freddy Pizza"  
-            //     }
-            // }
         }
 
     }

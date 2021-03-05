@@ -8,11 +8,12 @@ namespace PizzaBox.Client
     {
         static void Main(string[] args)
         {
-            PlayWithStore();
-            PlayWithPizza();
+            PrintStores();
+            System.Console.WriteLine();
+            PrintPizzas();
         }
 
-        public static void PlayWithPizza()
+        public static void PrintPizzas()
         {
             var pizzaSingleton = new PizzaSingleton();
 
@@ -22,7 +23,7 @@ namespace PizzaBox.Client
             }
         }
 
-        public static void PlayWithStore()
+        public static void PrintStores()
         {
             var storeSingleton = new StoreSingleton();
 

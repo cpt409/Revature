@@ -1,5 +1,9 @@
 namespace PizzaBox.Domain.Abstracts
 {
+
+    /// <summary>
+    /// 
+    /// </summary>
     abstract public class APizza
     {
         public APizza(string name)
@@ -9,15 +13,6 @@ namespace PizzaBox.Domain.Abstracts
 
         public string Name { get; set; }
 
-        
-
-
-
     }
-
-
-
-
-
 
 }
