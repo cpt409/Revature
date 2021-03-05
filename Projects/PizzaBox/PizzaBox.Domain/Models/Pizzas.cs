@@ -14,12 +14,16 @@ namespace PizzaBox.Domain.Models
 
         protected override void AddCrust()
         {
+
         }
         protected override void AddToppings()
         {
+            new Topping();
+            new Topping();
         }
         protected override void AddSize()
         {
+
         }
 
     }
@@ -35,12 +39,16 @@ namespace PizzaBox.Domain.Models
 
         protected override void AddCrust()
         {
+
         }
         protected override void AddToppings()
         {
+            new Topping();
+            new Topping();
         }
         protected override void AddSize()
         {
+
         }
 
     }
@@ -57,12 +65,16 @@ namespace PizzaBox.Domain.Models
 
         protected override void AddCrust()
         {
+            crust = new Crust();
         }
         protected override void AddToppings()
         {
+            new Topping();
+            new Topping();
         }
         protected override void AddSize()
         {
+            size = new Size();
         }
 
 

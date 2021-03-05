@@ -26,10 +26,10 @@ namespace PizzaBox.Client
 
         public static void PrintStores()
         {
-            var storeSingleton = new StoreSingleton();
+            //var storeSingleton = StoreSingleton.Instance;
 
             System.Console.WriteLine("List of Stores: ");
-            foreach(var store in storeSingleton.Stores){
+            foreach(var store in StoreSingleton.Instance.Stores){
                 System.Console.WriteLine(store);
             }
         }

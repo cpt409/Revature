@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
 using PizzaBox.Domain.Models;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace PizzaBox.Domain.Singletons
 {
@@ -8,16 +10,39 @@ namespace PizzaBox.Domain.Singletons
     {
         public List<AStore> Stores { get; set; }
 
-        public StoreSingleton()
+        private static StoreSingleton _storeSingleton;
+        public static StoreSingleton Instance
+        { 
+            get
+            {
+                if (_storeSingleton == null)
+                {
+                    _storeSingleton = new StoreSingleton();
+                }
+
+                return _storeSingleton;
+            }
+        }
+
+        public void WriteToXML()
+        {
+            string path = @"store.xml";
+            var writer = new StreamWriter(path);
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<AStore>));
+
+        }
+
+        
+        private StoreSingleton()
         {
             Stores = new List<AStore>()
             {
-                new FreddyStore("Freddy's Store"),
-                new MamasStore("Mama's Store"),
-                new PapasStore("Papa's Store")
+                new MiamiStore("Miami Store"),
+                new BostonStore("Boston Store")
             };
-
         }
+
 
     }
 
