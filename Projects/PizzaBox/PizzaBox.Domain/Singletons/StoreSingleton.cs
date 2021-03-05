@@ -24,14 +24,25 @@ namespace PizzaBox.Domain.Singletons
             }
         }
 
-        public void WriteToXML()
-        {
-            string path = @"store.xml";
-            var writer = new StreamWriter(path);
+        // public void WriteToXML(List<AStore> stores)
+        // {
+        //     string path = @"store.xml";
+        //     var writer = new StreamWriter(path);
 
-            XmlSerializer serializer = new XmlSerializer(typeof(List<AStore>));
+        //     /// transform object into text
+        //     XmlSerializer serializer = new XmlSerializer(typeof(List<BostonStore>));
+        //     serializer.Serialize(writer, stores);
 
-        }
+        // }
+
+        // public List<BostonStore> ReadFromXML(List<AStore> stores)
+        // {
+        //     string path = @"store.xml";
+        //     var reader = new StreamReader(path);
+
+        //     XmlSerializer serializer = new XmlSerializer(typeof(List<BostonStore>));
+        //     return serializer.Deserialize(reader) as List<BostonStore>;
+        // }
 
         
         private StoreSingleton()
@@ -41,6 +52,8 @@ namespace PizzaBox.Domain.Singletons
                 new MiamiStore("Miami Store"),
                 new BostonStore("Boston Store")
             };
+
+            //WriteToXML(s);
         }
 
 

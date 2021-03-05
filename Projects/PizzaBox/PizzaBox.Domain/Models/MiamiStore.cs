@@ -11,6 +11,11 @@ namespace PizzaBox.Domain.Models
             Orders = new List<Order>();
         }
 
+        public MiamiStore()
+        {
+            Name = "Miami Store";
+        }
+
         public override string ToString()
         {
             return this.Name;
