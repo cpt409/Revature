@@ -2,9 +2,9 @@ using PizzaBox.Domain.Abstracts;
 
 namespace PizzaBox.Domain.Models
 {
-    public class FreddyPizza : AStore
+    public class FreddyStore : AStore
     {
-        public FreddyPizza(string n) : base(n) {}
+        public FreddyStore(string n) : base(n) {}
 
         public override string ToString()
         {
@@ -12,9 +12,9 @@ namespace PizzaBox.Domain.Models
         }
     }
 
-    public class MamasPizza : AStore
+    public class MamasStore : AStore
     {
-        public MamasPizza(string n) : base(n) {}
+        public MamasStore(string n) : base(n) {}
 
         public override string ToString()
         {
@@ -22,9 +22,9 @@ namespace PizzaBox.Domain.Models
         }
     }
 
-    public class PapasPizza : AStore
+    public class PapasStore : AStore
     {
-        public PapasPizza(string n) : base(n) {}
+        public PapasStore(string n) : base(n) {}
 
         public override string ToString()
         {

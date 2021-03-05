@@ -12,9 +12,9 @@ namespace PizzaBox.Domain.Singletons
         {
             Stores = new List<AStore>()
             {
-                new FreddyPizza("Freddy's Store"),
-                new MamasPizza("Mama's Store"),
-                new PapasPizza("Papa's Store")
+                new FreddyStore("Freddy's Store"),
+                new MamasStore("Mama's Store"),
+                new PapasStore("Papa's Store")
             };
 
         }

@@ -17,6 +17,7 @@ namespace PizzaBox.Client
         {
             var pizzaSingleton = new PizzaSingleton();
 
+            System.Console.WriteLine("List of Pizzas: ");
             foreach(var pizza in pizzaSingleton.Pizzas)
             {
                 System.Console.WriteLine(pizza);
@@ -27,10 +28,10 @@ namespace PizzaBox.Client
         {
             var storeSingleton = new StoreSingleton();
 
+            System.Console.WriteLine("List of Stores: ");
             foreach(var store in storeSingleton.Stores){
                 System.Console.WriteLine(store);
             }
-
         }
     }
 }
