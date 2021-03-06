@@ -4,16 +4,8 @@
     <Name>Miami Store</Name>
     <Orders />
   </AStore>
-  <AStore xsi:type="MiamiStore">
-    <Name>Miami Store from File</Name>
-    <Orders />
-  </AStore>
   <AStore xsi:type="SantaFeStore">
     <Name>Santa Fe Store</Name>
-    <Orders />
-  </AStore>
-  <AStore xsi:type="SantaFeStore">
-    <Name>SF Store from File</Name>
     <Orders />
   </AStore>
 </ArrayOfAStore>

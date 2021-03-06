@@ -8,7 +8,6 @@ namespace PizzaBox.Domain.Abstracts
 
     [XmlInclude(typeof(SantaFeStore))]
     [XmlInclude(typeof(MiamiStore))]
-    [Serializable]
     abstract public class AStore
     {
 

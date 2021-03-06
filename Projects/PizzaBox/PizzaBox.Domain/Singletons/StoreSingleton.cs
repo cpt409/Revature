@@ -13,6 +13,7 @@ namespace PizzaBox.Domain.Singletons
         public List<AStore> Stores { get; set; }
 
         private static StoreSingleton _storeSingleton;
+
         public static StoreSingleton Instance
         {
             get
@@ -26,6 +27,18 @@ namespace PizzaBox.Domain.Singletons
             }
         }
 
+        private void CreateStores()
+        {
+            var fs = new FileStorage();
+
+            Stores = new List<AStore>()
+            {
+                new MiamiStore("Miami Store"),
+                new SantaFeStore("Santa Fe Store")
+            };
+
+            fs.WriteToXml(Stores);
+        }
 
         // public void WriteToXML<T>(List<T> data)
         // {
@@ -39,25 +52,24 @@ namespace PizzaBox.Domain.Singletons
 
         // }
 
-
+        private void PopulateStores()
+        {
+            System.Console.WriteLine("Reading Stores from file: ");
+            var fs = new FileStorage();
+            if (Stores == null)
+            {
+                Stores = fs.ReadFromXml<AStore>().ToList();
+            }
+        }
 
 
         private StoreSingleton()
         {
-            // Stores = new List<AStore>()
-            // {
-            //     new MiamiStore("Miami Store"),
-            //     new SantaFeStore("Santa Fe Store")
-            // };
+            // Use this method for creating new xml file
+            //CreateStores();
 
-            //WriteToXML(Stores);
-
-
-
-            var fs = new FileStorage();
-            if (Stores == null){
-                Stores = fs.ReadFromXml<AStore>().ToList();
-            }
+            // Use this method for reading from existing file
+            PopulateStores();
 
         }
 

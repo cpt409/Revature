@@ -5,7 +5,6 @@ using System;
 
 namespace PizzaBox.Domain.Models
 {
-    [Serializable]
     public class SantaFeStore : AStore
     {
         public SantaFeStore(string n) : base(n)
