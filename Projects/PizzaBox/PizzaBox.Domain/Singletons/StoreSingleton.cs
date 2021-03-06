@@ -1,8 +1,7 @@
+using System;
 using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
 using PizzaBox.Domain.Models;
-using System.IO;
-using System.Xml.Serialization;
 using PizzaBox.Storing;
 using System.Linq;
 
@@ -10,6 +9,17 @@ namespace PizzaBox.Domain.Singletons
 {
     public class StoreSingleton
     {
+        private StoreSingleton()
+        {
+            // Use this method for creating new xml file
+            // CreateStores();
+
+            // Use this method for reading from existing file
+            PopulateStores();
+
+        }
+
+
         public List<AStore> Stores { get; set; }
 
         private static StoreSingleton _storeSingleton;
@@ -31,48 +41,48 @@ namespace PizzaBox.Domain.Singletons
         {
             var fs = new FileStorage();
 
+            System.Console.WriteLine("(Creating new Store list)");
             Stores = new List<AStore>()
             {
                 new MiamiStore("Miami Store"),
                 new SantaFeStore("Santa Fe Store")
             };
 
-            fs.WriteToXml(Stores);
+            try
+            {
+                fs.WriteToXml(Stores);
+            }
+            catch(Exception ex)
+            {
+                PrintErrorMessage(ex);
+            }
+
         }
-
-        // public void WriteToXML<T>(List<T> data)
-        // {
-        //     string path = @"store.xml";
-
-        //     using (var writer = new StreamWriter(path))
-        //     {
-        //         var serializer = new XmlSerializer(typeof(List<T>));
-        //         serializer.Serialize(writer, data);
-        //     }
-
-        // }
 
         private void PopulateStores()
         {
-            System.Console.WriteLine("Reading Stores from file: ");
+            System.Console.WriteLine("(Reading Stores from file)");
             var fs = new FileStorage();
             if (Stores == null)
             {
-                Stores = fs.ReadFromXml<AStore>().ToList();
+                try
+                {
+                    Stores = fs.ReadFromXml<AStore>().ToList();
+                }
+                catch (Exception ex)
+                {
+                    PrintErrorMessage(ex);
+                }
             }
         }
 
-
-        private StoreSingleton()
+        private void PrintErrorMessage(Exception exception)
         {
-            // Use this method for creating new xml file
-            //CreateStores();
-
-            // Use this method for reading from existing file
-            PopulateStores();
-
+            System.Console.ForegroundColor = ConsoleColor.Red;
+            System.Console.WriteLine($"{exception.Message}");
+            System.Console.ResetColor();
+            System.Console.WriteLine();
         }
-
 
     }
 
