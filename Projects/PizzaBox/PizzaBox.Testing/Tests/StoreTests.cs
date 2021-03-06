@@ -7,11 +7,11 @@ namespace PizzaBox.Testing.Testing
     public class StoreTests
     {
         [Fact]
-        public void Test_BostonStore_Fact()
+        public void Test_SantaFeStore_Fact()
         {
             // arrange
-            var sut = new BostonStore();
-            var expected = "Boston Store";
+            var sut = new SantaFeStore();
+            var expected = "Santa Fe Store";
 
             // act
             var actual = sut.Name;
@@ -21,21 +21,20 @@ namespace PizzaBox.Testing.Testing
         }
 
 
-        // [Theory]
-        // [InlineData("Boston Store")]
-        // [InlineData("")]
-        // public void Test_BostonStore_Theory(string expected)
-        // {
-        //     // arrange
-        //     var sut = new BostonStore();
-        //     var expected = "Boston Store";
+        [Theory]
+        [InlineData("Santa Fe Store")]
+        [InlineData("")]
+        public void Test_SantaFe_Theory(string expected)
+        {
+            // arrange
+            var sut = new SantaFeStore();
 
-        //     // act
-        //     var actual = sut.Name;
+            // act
+            var actual = sut.Name;
 
-        //     // assert
-        //     Assert.Equal(expected, actual);
-        // }        
+            // assert
+            Assert.Equal(expected, actual);
+        }        
 
 
 

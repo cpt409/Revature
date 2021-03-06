@@ -13,7 +13,7 @@ namespace PizzaBox.Storing
             using (var writer = new StreamWriter(_path))
             {
                 var serializer = new XmlSerializer(typeof(List<T>));
-                    serializer.Serialize(writer, data);
+                serializer.Serialize(writer, data);
             }
         }
 
@@ -26,9 +26,5 @@ namespace PizzaBox.Storing
             }
         }
 
-        public void ReadFromXml()
-        {
-
-        }
     }
 }

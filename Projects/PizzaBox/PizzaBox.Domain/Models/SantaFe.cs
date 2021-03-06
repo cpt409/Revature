@@ -1,23 +1,21 @@
 using PizzaBox.Domain.Abstracts;
 using System.Collections.Generic;
 using System.Xml.Serialization;
-
+using System;
 
 namespace PizzaBox.Domain.Models
 {
-    // [XmlInclude(typeof(BostonStore))]
-    // [Serializable]
-
-    public class BostonStore : AStore
+    [Serializable]
+    public class SantaFeStore : AStore
     {
-        public BostonStore(string n) : base(n)
+        public SantaFeStore(string n) : base(n)
         {
             Orders = new List<Order>();
         }
 
-        public BostonStore()
+        public SantaFeStore()
         {
-            Name = "Boston Store";
+            Name = "Santa Fe Store";
         }
 
         public override string ToString()

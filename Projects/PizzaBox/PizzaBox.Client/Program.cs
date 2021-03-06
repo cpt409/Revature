@@ -32,6 +32,11 @@ namespace PizzaBox.Client
             foreach(var store in StoreSingleton.Instance.Stores){
                 System.Console.WriteLine(store);
             }
+
+
+            
+
+
         }
     }
 }

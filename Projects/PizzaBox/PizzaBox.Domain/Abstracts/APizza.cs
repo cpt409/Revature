@@ -8,6 +8,7 @@ namespace PizzaBox.Domain.Abstracts
     /// </summary>
     abstract public class APizza
     {
+        public APizza() {}
         public APizza(string name)
         {
             Name = name;   
