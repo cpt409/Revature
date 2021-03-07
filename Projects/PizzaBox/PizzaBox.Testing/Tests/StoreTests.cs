@@ -2,7 +2,7 @@ using PizzaBox.Domain.Models;
 using Xunit;
 
 
-namespace PizzaBox.Testing.Testing
+namespace PizzaBox.Testing.Tests
 {
     public class StoreTests
     {
@@ -21,20 +21,20 @@ namespace PizzaBox.Testing.Testing
         }
 
 
-        [Theory]
-        [InlineData("Santa Fe Store")]
-        [InlineData("")]
-        public void Test_SantaFe_Theory(string expected)
-        {
-            // arrange
-            var sut = new SantaFeStore();
+        // [Theory]
+        // [InlineData("Santa Fe Store")]
+        // [InlineData("")]
+        // public void Test_SantaFe_Theory(string expected)
+        // {
+        //     // arrange
+        //     var sut = new SantaFeStore();
 
-            // act
-            var actual = sut.Name;
+        //     // act
+        //     var actual = sut.Name;
 
-            // assert
-            Assert.Equal(expected, actual);
-        }        
+        //     // assert
+        //     Assert.Equal(expected, actual);
+        // }        
 
 
 

@@ -8,7 +8,11 @@ namespace PizzaBox.Domain.Abstracts
     /// </summary>
     abstract public class APizza
     {
-        public APizza() {}
+        public APizza()
+        {
+            Toppings = new List<Topping>();
+            FactoryMethod();
+        }
         public APizza(string name)
         {
             Name = name;

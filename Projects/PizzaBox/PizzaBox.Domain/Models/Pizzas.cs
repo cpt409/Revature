@@ -5,6 +5,11 @@ namespace PizzaBox.Domain.Models
 {
     public class PepperoniPizza : APizza
     {
+        public PepperoniPizza() 
+        { 
+            Name = "Pepperoni Pizza";           
+        }
+
         public PepperoniPizza(string n) : base(n) {}
 
         public override string ToString()
@@ -26,10 +31,21 @@ namespace PizzaBox.Domain.Models
 
         }
 
+        public bool ValidateToppingRange(int toppingsCount)
+        {
+            if (toppingsCount < 2 || toppingsCount > 5)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
     }
 
     public class VeggiePizza : APizza
     {
+        public VeggiePizza() {}
         public VeggiePizza(string n) : base(n) {}
 
         public override string ToString()
@@ -57,6 +73,7 @@ namespace PizzaBox.Domain.Models
 
     public class MeatLoversPizza : APizza
     {
+        public MeatLoversPizza() {}
         public MeatLoversPizza(string n) : base(n) { }
 
         public override string ToString()
