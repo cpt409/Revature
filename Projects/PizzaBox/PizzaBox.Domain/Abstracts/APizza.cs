@@ -11,7 +11,8 @@ namespace PizzaBox.Domain.Abstracts
         public APizza() {}
         public APizza(string name)
         {
-            Name = name;   
+            Name = name;
+            Toppings = new List<Topping>();
             FactoryMethod();
         }
 

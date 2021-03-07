@@ -14,12 +14,12 @@ namespace PizzaBox.Domain.Models
 
         protected override void AddCrust()
         {
-
+            crust = new StandardCrust();
         }
         protected override void AddToppings()
         {
-            new Topping();
-            new Topping();
+            Toppings.Add(new Pepperoni());
+            Toppings.Add(new Cheese());
         }
         protected override void AddSize()
         {
@@ -39,12 +39,13 @@ namespace PizzaBox.Domain.Models
 
         protected override void AddCrust()
         {
-
+            crust = new StandardCrust();
         }
         protected override void AddToppings()
         {
-            new Topping();
-            new Topping();
+            Toppings.Add(new Brocolli());
+            Toppings.Add(new Onion());
+            Toppings.Add(new Cheese());
         }
         protected override void AddSize()
         {
@@ -65,21 +66,21 @@ namespace PizzaBox.Domain.Models
 
         protected override void AddCrust()
         {
-            crust = new Crust();
+            crust = new StandardCrust();
         }
         protected override void AddToppings()
         {
-            new Topping();
-            new Topping();
+            Toppings.Add(new Pepperoni());
+            Toppings.Add(new GroundBeef());
+            Toppings.Add(new Anchovie());
+            Toppings.Add(new Cheese());
         }
         protected override void AddSize()
         {
             size = new Size();
         }
 
-
-
-        
+      
     }
 
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using PizzaBox.Domain.Models;
 using PizzaBox.Domain.Singletons;
+using System.IO;
 
 namespace PizzaBox.Client
 {
@@ -9,13 +10,13 @@ namespace PizzaBox.Client
         static void Main(string[] args)
         {
             System.Console.Clear();
-            System.Console.WriteLine("\n\n");
             PrintMessage(ConsoleColor.Magenta, "Welcome to Pizza Box USA");
-            System.Console.WriteLine("\n\n");
+            System.Console.WriteLine("\n");
 
             PrintStores();
             System.Console.WriteLine();
             PrintPizzas();
+
         }
 
         public static void PrintPizzas()
@@ -26,6 +27,11 @@ namespace PizzaBox.Client
             foreach(var pizza in pizzaSingleton.Pizzas)
             {
                 System.Console.WriteLine(pizza);
+                System.Console.WriteLine($"\t{pizza.crust}");
+                foreach(var topping in pizza.Toppings)
+                {
+                    System.Console.WriteLine($"\t{topping}");
+                }
             }
         }
 
